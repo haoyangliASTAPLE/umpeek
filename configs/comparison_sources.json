@@ -1,0 +1,30 @@
+{
+  "schema_version": "comparison_sources_v1",
+  "implementations_included": false,
+  "reader_action": "Obtain and implement each comparison method from its official source.",
+  "methods": {
+    "ADAM": {
+      "paper_url": "https://openreview.net/forum?id=9H1nu8Z6Uy",
+      "code_url": null,
+      "note": "No stable official code release was available when this artifact was prepared."
+    },
+    "LLM-PBE": {
+      "code_url": "https://github.com/QinbinLi/LLM-PBE"
+    },
+    "PLeak": {
+      "code_url": "https://github.com/BHui97/PLeak"
+    },
+    "IPI": {
+      "code_url": "https://github.com/uiuc-kang-lab/InjecAgent"
+    },
+    "Imprompter": {
+      "code_url": "https://github.com/Reapor-Yurnero/imprompter"
+    },
+    "AttrInf": {
+      "code_url": "https://github.com/eth-sri/llmprivacy"
+    },
+    "PIE": {
+      "code_url": "https://github.com/liu00222/LLM-Based-Personal-Profile-Extraction"
+    }
+  }
+}

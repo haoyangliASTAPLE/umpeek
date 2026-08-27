@@ -1,0 +1,70 @@
+{
+  "artifact_schema_version": "anonymous_release_v1",
+  "victim": {
+    "model": "Qwen/Qwen3-14B",
+    "serving_layer": "vLLM OpenAI-compatible API",
+    "thinking_enabled": false,
+    "temperature": 0.0
+  },
+  "umpeek": {
+    "method_name": "UMPeek_final",
+    "method_version": "r007_active_bayesian_profile_denoising_v004",
+    "base_adapter_version": "r005_schema_induced_slot_probe_v12",
+    "metric_scope": "latent_user_model_v2"
+  },
+  "methods": [
+    "UMPeek_final"
+  ],
+  "reported_comparison_methods": [
+    "ADAM",
+    "LLM-PBE",
+    "PLeak",
+    "IPI",
+    "Imprompter",
+    "AttrInf",
+    "PIE"
+  ],
+  "comparison_source_manifest": "configs/comparison_sources.json",
+  "comparison_implementations_included": false,
+  "backends": [
+    "Mem0",
+    "Graphiti",
+    "LangMem+LangGraph"
+  ],
+  "benchmarks": [
+    "PersonaMem-v2",
+    "PersonaLens",
+    "ETAPP",
+    "LoCoMo"
+  ],
+  "metrics": [
+    "UMR-F1",
+    "Causal-Weighted UMR-F1",
+    "CRS",
+    "HBPS",
+    "DSG",
+    "ASR@tau",
+    "Budget-AUC",
+    "Attack Cost"
+  ],
+  "query_budget_grid": [1, 2, 4, 8, 16],
+  "asr_thresholds": {
+    "umr_f1": 0.5,
+    "crs": 0.5
+  },
+  "split_policy": {
+    "name": "role_locked_benchmark_split_v4",
+    "roles": [
+      "private_evaluator",
+      "public_attack_probe",
+      "independent_behavior_heldout"
+    ],
+    "attack_heldout_overlap": "forbidden"
+  },
+  "release_scope": {
+    "private_evaluator_rows_included": false,
+    "heldout_task_contents_included": false,
+    "public_format_examples_included": true,
+    "derived_scalar_records_included": true
+  }
+}

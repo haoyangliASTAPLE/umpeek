@@ -1,0 +1,75 @@
+{
+  "attack_probe_public_path": "data/interim/eval2_splits/a200_role_locked_benchmark_split_v4/locomo_10conv_1523qa_20speakers/attack_probe_public.jsonl",
+  "attack_rows_with_any_heldout": 1523,
+  "behavior_heldout_path": "data/interim/eval2_splits/a200_role_locked_benchmark_split_v4/locomo_10conv_1523qa_20speakers/behavior_heldout.jsonl",
+  "behavior_heldout_row_count": 4569,
+  "benchmark": "LoCoMo_10conv_1523QA_20speakers",
+  "eval_rows_path": "data/interim/eval2_splits/a200_role_locked_benchmark_split_v4/locomo_10conv_1523qa_20speakers/eval_rows.jsonl",
+  "forbidden_legacy_split_sources": [
+    "data/interim/exp1_whitebox/*/representative_subset.jsonl",
+    "data/interim/benchmarks/ETAPP/expanded_v1/quick_subset.jsonl",
+    "data/interim/eval2_splits/a200_strong_query_split_v1",
+    "data/interim/eval2_splits/a200_strong_query_split_v2",
+    "data/interim/eval2_splits/a200_strong_query_split_v3"
+  ],
+  "group_summary": {
+    "group_count": 20,
+    "groups_with_at_least_2": 20,
+    "max_rows_per_group": 123,
+    "min_rows_per_group": 33,
+    "no_group_row_count": 0
+  },
+  "heldout_count_distribution": {
+    "3": 1523
+  },
+  "heldout_policy": {
+    "attack_probe_visible_to_attacker": true,
+    "behavior_heldout_visible_to_attacker": false,
+    "forbid_runtime_dynamic_heldout": true,
+    "heldout_tasks_per_attack_probe_target": 3,
+    "memory_seed_visible_to_attacker": false,
+    "private_eval_rows_visible_to_attackers": false,
+    "strategy": "precomputed_same_user_or_context_different_task_v1"
+  },
+  "public_attack_probe_row_count": 1523,
+  "row_count": 1523,
+  "schema_version": "a200_role_locked_benchmark_split_v4",
+  "source_path": "data/benchmarks/LoCoMo/task_rows.jsonl",
+  "source_paths": [
+    "data/interim/eval2_splits/a200_role_locked_benchmark_split_v4/locomo_10conv_1523qa_20speakers/eval_rows.jsonl",
+    "data/interim/eval2_splits/a200_role_locked_benchmark_split_v4/locomo_10conv_1523qa_20speakers/attack_probe_public.jsonl",
+    "data/interim/eval2_splits/a200_role_locked_benchmark_split_v4/locomo_10conv_1523qa_20speakers/behavior_heldout.jsonl",
+    "data/benchmarks/LoCoMo/task_rows.jsonl",
+    "data/interim/eval2_splits/a200_role_locked_benchmark_split_v4/locomo_10conv_1523qa_20speakers/split_manifest.json"
+  ],
+  "split_id": "a200_role_locked_benchmark_split_v4__locomo_10conv_1523qa_20speakers",
+  "split_roles": {
+    "attack_probe": {
+      "description": "public task/query projection exposed through AttackInput",
+      "used_by": "attack_methods",
+      "visible_to_attacker": true
+    },
+    "behavior_heldout": {
+      "description": "private heldout behavior tasks used only by HBPS",
+      "used_by": "hbps_only",
+      "visible_to_attacker": false
+    },
+    "evaluator_row": {
+      "description": "private row joining source fields, gold state, split ids, and heldout tasks",
+      "used_by": "eval_runner_only",
+      "visible_to_attacker": false
+    },
+    "memory_seed": {
+      "description": "private benchmark profile/history/evidence used to seed backend memory",
+      "used_by": "backend_materializer",
+      "visible_to_attacker": false
+    }
+  },
+  "threat_model_visibility": {
+    "attack_probe_visible_to_attacker": true,
+    "behavior_heldout_visible_to_attacker": false,
+    "memory_seed_visible_to_attacker": false,
+    "private_eval_rows_visible_to_attackers": false
+  },
+  "unique_heldout_source_row_count": 1425
+}

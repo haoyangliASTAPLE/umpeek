@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "umpeek-artifact"
+version = "0.1.0"
+description = "Anonymous artifact for evaluating user-model recovery from personalized agent behavior"
+requires-python = ">=3.10"
+dependencies = [
+  "huggingface-hub>=0.26",
+  "numpy>=1.24",
+  "openai>=1.50",
+  "pandas>=2.0",
+  "PyYAML>=6.0",
+  "transformers>=4.51",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+serve = ["vllm==0.22.1"]
+test = ["pytest>=8.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

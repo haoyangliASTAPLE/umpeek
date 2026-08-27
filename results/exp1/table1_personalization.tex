@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrccccccc}
+\toprule
+Benchmark & Backend & N & Score($S$) & No memory & Delete $S$ & Swap $S$ & Gain & Delete drop & Swap change \\
+\midrule
+PersonaMem-v2 & Mem0 & 512 & 0.711 $\pm$ 0.039 & 0.232 $\pm$ 0.037 & 0.225 $\pm$ 0.036 & 0.273 $\pm$ 0.039 & \textbf{0.479 $\pm$ 0.051} & \textbf{0.486 $\pm$ 0.052} & \textbf{0.625 $\pm$ 0.042} \\
+PersonaMem-v2 & Graphiti & 512 & 0.752 $\pm$ 0.037 & 0.229 $\pm$ 0.036 & 0.227 $\pm$ 0.036 & 0.287 $\pm$ 0.039 & \textbf{0.523 $\pm$ 0.051} & \textbf{0.525 $\pm$ 0.052} & \textbf{0.658 $\pm$ 0.041} \\
+PersonaMem-v2 & LangMem+LangGraph & 512 & 0.748 $\pm$ 0.038 & 0.229 $\pm$ 0.036 & 0.227 $\pm$ 0.036 & 0.266 $\pm$ 0.038 & \textbf{0.520 $\pm$ 0.050} & \textbf{0.521 $\pm$ 0.051} & \textbf{0.641 $\pm$ 0.042} \\
+\addlinespace
+PersonaLens & Mem0 & 512 & 0.801 $\pm$ 0.024 & 0.111 $\pm$ 0.016 & 0.097 $\pm$ 0.015 & 0.593 $\pm$ 0.022 & \textbf{0.689 $\pm$ 0.026} & \textbf{0.704 $\pm$ 0.026} & \textbf{0.863 $\pm$ 0.030} \\
+PersonaLens & Graphiti & 512 & 0.823 $\pm$ 0.023 & 0.112 $\pm$ 0.016 & 0.100 $\pm$ 0.016 & 0.599 $\pm$ 0.022 & \textbf{0.710 $\pm$ 0.027} & \textbf{0.722 $\pm$ 0.026} & \textbf{0.854 $\pm$ 0.031} \\
+PersonaLens & LangMem+LangGraph & 512 & 0.774 $\pm$ 0.026 & 0.110 $\pm$ 0.016 & 0.098 $\pm$ 0.015 & 0.553 $\pm$ 0.025 & \textbf{0.664 $\pm$ 0.029} & \textbf{0.676 $\pm$ 0.028} & \textbf{0.830 $\pm$ 0.033} \\
+\addlinespace
+ETAPP & Mem0 & 512 & 0.612 $\pm$ 0.019 & 0.331 $\pm$ 0.027 & 0.281 $\pm$ 0.025 & 0.551 $\pm$ 0.021 & \textbf{0.281 $\pm$ 0.030} & \textbf{0.331 $\pm$ 0.033} & \textbf{0.441 $\pm$ 0.043} \\
+ETAPP & Graphiti & 512 & 0.636 $\pm$ 0.021 & 0.331 $\pm$ 0.027 & 0.281 $\pm$ 0.025 & 0.574 $\pm$ 0.022 & \textbf{0.305 $\pm$ 0.033} & \textbf{0.355 $\pm$ 0.034} & \textbf{0.498 $\pm$ 0.043} \\
+ETAPP & LangMem+LangGraph & 512 & 0.633 $\pm$ 0.020 & 0.331 $\pm$ 0.027 & 0.281 $\pm$ 0.025 & 0.580 $\pm$ 0.021 & \textbf{0.302 $\pm$ 0.032} & \textbf{0.352 $\pm$ 0.033} & \textbf{0.432 $\pm$ 0.043} \\
+\addlinespace
+LoCoMo & Mem0 & 512 & 0.471 $\pm$ 0.034 & 0.136 $\pm$ 0.022 & 0.039 $\pm$ 0.013 & 0.086 $\pm$ 0.019 & \textbf{0.335 $\pm$ 0.037} & \textbf{0.432 $\pm$ 0.035} & \textbf{0.842 $\pm$ 0.032} \\
+LoCoMo & Graphiti & 512 & 0.466 $\pm$ 0.034 & 0.139 $\pm$ 0.022 & 0.039 $\pm$ 0.013 & 0.086 $\pm$ 0.019 & \textbf{0.327 $\pm$ 0.037} & \textbf{0.428 $\pm$ 0.035} & \textbf{0.830 $\pm$ 0.033} \\
+LoCoMo & LangMem+LangGraph & 512 & 0.458 $\pm$ 0.034 & 0.139 $\pm$ 0.022 & 0.038 $\pm$ 0.013 & 0.077 $\pm$ 0.017 & \textbf{0.318 $\pm$ 0.037} & \textbf{0.419 $\pm$ 0.035} & \textbf{0.844 $\pm$ 0.031} \\
+\bottomrule
+\end{tabular}
+\end{table*}

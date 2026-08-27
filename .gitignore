@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+build/
+runs/
+my/
+data/raw/
+data/interim/
+*.log
+
+# Third-party datasets, repositories, and model/runtime resources.
+.vendor/
+external/
+data/external/
+data/benchmarks/

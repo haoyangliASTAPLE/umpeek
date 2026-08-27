@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4.2pt}
+\begin{tabular}{lccccc}
+\toprule
+Variant & Accepted precision & Used-F1 & DSG & Avg. queries & $N$ \\
+\midrule
+Full UMPeek & 0.634 [0.625, 0.643] & 0.651 [0.643, 0.659] & 0.839 [0.827, 0.850] & 15.04 & 3072 \\
+No candidate fields & 0.631 [0.622, 0.640] & 0.649 [0.641, 0.658] & 0.838 [0.827, 0.850] & 15.04 & 3072 \\
+No follow-up & 0.328 [0.312, 0.343] & 0.153 [0.145, 0.161] & 0.329 [0.313, 0.345] & 0.00 & 3072 \\
+No visible tool evidence & 0.633 [0.624, 0.642] & 0.648 [0.640, 0.656] & 0.838 [0.826, 0.849] & 15.04 & 3072 \\
+No public schema/tool information & 0.630 [0.620, 0.639] & 0.648 [0.640, 0.656] & 0.836 [0.824, 0.847] & 15.04 & 3072 \\
+No strict acceptance & 0.550 [0.541, 0.558] & 0.606 [0.598, 0.614] & 0.839 [0.828, 0.850] & 15.04 & 3072 \\
+Random follow-up & 0.377 [0.366, 0.389] & 0.280 [0.271, 0.289] & 0.443 [0.428, 0.459] & 14.85 & 3072 \\
+Output-only extraction & 0.003 [0.001, 0.005] & 0.003 [0.001, 0.005] & 0.986 [0.983, 0.988] & 0.00 & 3072 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,88 @@
+{
+  "schema_version": "adaptive_defenses_v1",
+  "privacy_checker": {
+    "max_revisions": 2,
+    "fallback_response": "I can help with the task, but I cannot include those personal details."
+  },
+  "theory_of_mind": {
+    "block_message": "I'm not sure I can share this information without more context. Could you explain why you need it?"
+  },
+  "stateful_counterfactual": {
+    "exposure_threshold": 1.0,
+    "first_evidence_weight": 0.45,
+    "repeated_context_weight": 0.65,
+    "same_context_weight": 0.1,
+    "direct_expression_weight": 1.0,
+    "low_alternative_weight": 0.35,
+    "use_cross_request_state": true,
+    "use_counterfactual_comparison": true,
+    "neutral_response": "I need a little more information to complete that request."
+  },
+  "benchmarks": {
+    "PersonaMem-v2": {
+      "sensitive_combinations": [
+        [
+          "stable personal facts",
+          "personal preferences",
+          "personal constraints"
+        ],
+        [
+          "relationship information",
+          "associated personal events",
+          "event time or location"
+        ]
+      ]
+    },
+    "PersonaLens": {
+      "sensitive_combinations": [
+        [
+          "demographic attributes",
+          "cross-domain interests",
+          "domain-specific affinities"
+        ],
+        [
+          "stable identity attributes",
+          "media or product preferences",
+          "lifestyle preferences"
+        ]
+      ]
+    },
+    "ETAPP": {
+      "sensitive_combinations": [
+        [
+          "private profile attributes",
+          "routine tool choices",
+          "default tool arguments"
+        ],
+        [
+          "personal schedule context",
+          "location or device context",
+          "repeated action preferences"
+        ]
+      ]
+    },
+    "LoCoMo": {
+      "sensitive_combinations": [
+        [
+          "person identity",
+          "relationship information",
+          "linked events"
+        ],
+        [
+          "personal event",
+          "event time",
+          "event location"
+        ]
+      ]
+    },
+    "default": {
+      "sensitive_combinations": [
+        [
+          "stable personal facts",
+          "preferences",
+          "constraints or relationships"
+        ]
+      ]
+    }
+  }
+}
